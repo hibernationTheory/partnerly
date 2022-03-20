@@ -1,4 +1,4 @@
-export function MainButton({ onClick, disabled, label, className = "" }) {
+export function MainButton({ onClick, disabled, label }) {
   return (
     <button
       onClick={onClick}
@@ -6,7 +6,7 @@ export function MainButton({ onClick, disabled, label, className = "" }) {
       disabled={disabled}
     >
       <span
-        className={`inline-flex items-center justify-center px-5 py-3 border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 bg-gradient-to-br from-blue-400 to-zinc-500 ${className}`}
+        className={`inline-flex items-center justify-center px-5 py-3 border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 bg-gradient-to-br from-blue-400 to-zinc-500`}
       >
         {label}
       </span>
@@ -75,22 +75,4 @@ export function PartnerInput({ address, split }) {
       </div>
     </div>
   );
-}
-
-export function MarkdownContainer({ children }) {
-  return (
-    <main
-      className={
-        "flex flex-1 flex-col items-center justify-start py-8 pt-12 md:pt-20 text-zinc-700"
-      }
-    >
-      <MaxWidth>
-        <div className="mdx">{children}</div>
-      </MaxWidth>
-    </main>
-  );
-}
-
-export function MaxWidth({ children }) {
-  return <div className="w-full max-w-2xl px-6">{children}</div>;
 }
